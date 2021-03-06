@@ -36,6 +36,7 @@
         <th>Deletar</th>
     </tr>
     </thead>
+    <!--Adicionado dentro da TAG <i> a Function alert informando que a tarefa foi apadada-->
     <tbody>
     <tr th:each="evento : ${eventos}">
         <td><span th:text="${evento.nome}"></span></a></td>
@@ -44,7 +45,7 @@
         <td><span th:text="${evento.horario}"></span></td>
         <td><a class="waves-effect waves-light btn-small"
                th:href="${(#mvc.url('EC#deletarEvento').arg(0, evento.codigo)).build()}">
-            <i class="material-icons left" onclick="alert('Evento apagado')">delete</i></a></td>
+            <i class="material-icons left" onclick="alert('Sua tarefa foi apagada')">delete</i></a></td>
     </tr>
     </tbody>
 
